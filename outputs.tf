@@ -1,3 +1,7 @@
+output "virtual_desktop_scaling_plan_host_pool_associations_id" {
+  description = "Map of id values across all virtual_desktop_scaling_plan_host_pool_associations, keyed the same as var.virtual_desktop_scaling_plan_host_pool_associations"
+  value       = { for k, v in azurerm_virtual_desktop_scaling_plan_host_pool_association.virtual_desktop_scaling_plan_host_pool_associations : k => v.id }
+}
 output "virtual_desktop_scaling_plan_host_pool_associations_enabled" {
   description = "Map of enabled values across all virtual_desktop_scaling_plan_host_pool_associations, keyed the same as var.virtual_desktop_scaling_plan_host_pool_associations"
   value       = { for k, v in azurerm_virtual_desktop_scaling_plan_host_pool_association.virtual_desktop_scaling_plan_host_pool_associations : k => v.enabled }
